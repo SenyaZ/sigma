@@ -119,7 +119,7 @@ function foo($str){
         }
 
         public function getScholarship(){
-            if($this->mark == 5){
+            if($this->mark === 5){
                 return 100;
             }else return 80;
         }
@@ -135,15 +135,23 @@ class Aspirant {
        }
 
     public function getScholarship(){
-        if($this->mark == 5){
+        if($this->mark === 5){
             return 200;
         }else return 180;
     }
 
 }
 
-$student = new Student("a","b","c", 5);
-    $student->getObj(true);
+for($i=0;$i<10;$i++){
+    $student[$i] = new Student("a","b","c", $i%6);
+    $student[$i]->getObj(true);
+    print_r($student[$i]->getScholarship());
+    print_r("\n");
+}
+
+
+
+
 
 
 
