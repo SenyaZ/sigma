@@ -46,7 +46,7 @@
             '<div class="card-body">';
         echo "<h5 class='card-title'>". $arrBasket[$i]->getName() ."</h5>";
         echo "<p class='card-text'>". $arrBasket[$i]->getDescription() ."</p>";
-        echo "<a href='delete.php?".$arrBasket[$i]->getId()."' class='btn btn-primary' @click='decriment();'>Delete from cast</a></div></div>";
+        echo "<a @click=\"minus\" href='delete.php?".$arrBasket[$i]->getId()."' class='btn btn-primary' @click='decriment();'>Delete from cast</a></div></div>";
 
     }
 ?>

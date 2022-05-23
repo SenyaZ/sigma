@@ -15,10 +15,10 @@
     Store
             </a>
             <div class="navbar-nav">
-Backet: {{countProduct}}
+                Favorites: {{counter}}
             </div>
             <div class="navbar-nav">
-Backet: {{countProduct}}
+Backet: {{counter}}
             </div>
         </div>
     </nav>

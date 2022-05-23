@@ -1,31 +1,27 @@
-
-
 Vue.createApp({
-        data() {
-            return {
-                countProduct: 0,
-            };
+    data() {
+        return {
+            counter: 0,
+        }
+    },
+    methods: {
+        plus(){
+            this.counter++;
+            localStorage.counter = this.counter
         },
-        methods:{
-            plus() {
-                this.countProduct += 1;
-                localStorage.counter =  this.countProduct;
-            },
-            setLocalCounter(){
-                localStorage.counter = this.countProduct;
-            },
-            decriment(){
-                this.countProduct -= 1;
-                localStorage.counter =  this.countProduct;
-            }
+        minus(){
+            this.counter--;
+            localStorage.counter = this.counter
         },
+        reset(){
+            this.counter = 0;
+            localStorage.counter = this.counter
+        }
+    },
     mounted(){
-            if (localStorage.counter){
-                this.countProduct = localStorage.counter;
-            }
+        if(localStorage.counter){
+            this.counter = localStorage.counter
+        }
     }
-}).mount('#app');
 
-
-
-
+}).mount('#app')

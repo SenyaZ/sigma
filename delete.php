@@ -13,4 +13,6 @@
             $res->execute();
     }
 
-    echo "<a href='backet.php' class='btn btn-primary'>Back to basket</a>";
+    echo "<a href='backet.php'  class='btn btn-primary'>Back to basket</a>";
+
+    include_once "./public/template/footer.php";
